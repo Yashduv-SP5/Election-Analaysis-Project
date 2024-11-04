@@ -1,0 +1,67 @@
+<html>
+<head>
+{% load static %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static "css/image1.css" %}">
+<script>
+    // Array of image URLs
+    var images = [
+        "https://plus.unsplash.com/premium_photo-1675805015359-fda0a96d5842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1685665535340-c3b6d390a15f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+        "https://plus.unsplash.com/premium_photo-1675805015359-fda0a96d5842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1682685795557-976f03aca7b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+        "https://images.unsplash.com/photo-1682685795557-976f03aca7b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+    ];
+    
+    var currentIndex = 0;
+    var imageElement = document.body;
+    
+    function changeImage() {
+        imageElement.style.backgroundImage = "url('" + images[currentIndex] + "')";
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+    
+    setInterval(changeImage, 5000); // Change image every 5 seconds
+</script>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<table>
+<tr>
+<td>
+<h1>
+Welcome to FaceDetection 
+<br
+</h1>
+</td>
+</tr>
+<tr>
+<td>
+<div class="container">
+<a href="/face-detection" class="btn btn-success"><h2>click here to recognise the face</h2>
+</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="container">
+
+<table class="new" border="3">
+<tr class="new">
+<td><img src="https://tse3.mm.bing.net/th?id=OIP.R6HkKEnRHh0EdSnV7W-sigHaEG&pid=Api&P=0&h=180" height="400px" width="1135px">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
